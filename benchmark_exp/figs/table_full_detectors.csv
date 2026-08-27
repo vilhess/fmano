@@ -20,8 +20,8 @@ Chronos2BankEmbeddingCosine,Bank,17.654,0.831,19.149,0.287
 TiRexBankEmbeddingEuclidean,Bank,17.829,0.826,19.826,0.274
 Toto2BankEmbeddingEuclidean,Bank,18.216,0.825,19.493,0.271
 FlowStateBankEmbeddingCosine,Bank,18.231,0.828,20.143,0.281
-Toto2BankEmbeddingCosine,Bank,18.626,0.823,20.017,0.270
 OneLiner,Var+SqDiff,18.626,0.754,16.850,0.408
+Toto2BankEmbeddingCosine,Bank,18.626,0.823,20.017,0.270
 FlowStateBankEmbeddingPAI,Bank+PAI,19.121,0.846,20.256,0.326
 Chronos2Forecaster,Forecaster,21.599,0.740,20.564,0.294
 T0alphaForecaster,Forecaster,22.024,0.736,21.157,0.291
