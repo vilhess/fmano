@@ -14,6 +14,8 @@ def load_baseline(name):
     return pd.read_csv(os.path.join(BASELINE_DIR, f"{name}.csv"))
 
 BACKBONE_ORDER = ["TiRex", "FlowState", "T0alpha", "Chronos2", "Toto2"]
+DISPLAY_NAME = {"TiRex": "TiRex", "FlowState": "FlowState", "T0alpha": "T0-alpha",
+                "Chronos2": "Chronos-2", "Toto2": "Toto-2"}
 TICK_FONTSIZE = 11  
 LABEL_FONTSIZE = 12 
 LEGEND_FONTSIZE = 11
@@ -102,7 +104,7 @@ def plot(df_metrics, df_matrixprofile):
         ax.set_yticks(list(y_positions))
 
         if i == 0:
-            ax.set_yticklabels(backbone_order, fontsize=TICK_FONTSIZE, fontweight="bold")
+            ax.set_yticklabels([DISPLAY_NAME[b] for b in backbone_order], fontsize=TICK_FONTSIZE, fontweight="bold")
             ax.invert_yaxis()  
         else:
             ax.tick_params(axis="y", labelleft=False)
