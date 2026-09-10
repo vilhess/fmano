@@ -77,7 +77,7 @@ LEGEND_LABELS = ["Forecaster", "Bank (cosine)", "Bank+PAI", "Bank+kNN", "Bank+PA
 def plot(df_metrics, df_matrixprofile):
     backbone_order = BACKBONE_ORDER
 
-    fig, axes = plt.subplots(1, len(METRICS), figsize=(7.6, 3.1), sharey=True)
+    fig, axes = plt.subplots(1, len(METRICS), figsize=(9.0, 3.1), sharey=True)
 
     for i, (ax, metric) in enumerate(zip(axes, METRICS)):
         df = aligned(df_metrics, metric)
@@ -109,6 +109,7 @@ def plot(df_metrics, df_matrixprofile):
         else:
             ax.tick_params(axis="y", labelleft=False)
         ax.set_title(metric, fontsize=LABEL_FONTSIZE, pad=6, fontweight="bold")
+        ax.xaxis.set_major_locator(plt.MaxNLocator(4))
         ax.tick_params(axis="x", labelsize=TICK_FONTSIZE)
         ax.tick_params(axis="y", labelsize=TICK_FONTSIZE)
         ax.grid(axis="x")
@@ -133,6 +134,7 @@ def plot(df_metrics, df_matrixprofile):
                handletextpad=0.5, handlelength=1.6)
 
     fig.tight_layout(rect=[0, 0.25, 1, 1])
+    fig.subplots_adjust(wspace=0.35)
     return fig
 
 
